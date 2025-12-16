@@ -332,7 +332,7 @@ body {
 .access-title {
   position: absolute;
   top: -10px;               /* ここがようやく効く！ */
-  left: 49%;
+  left: 51.5%;
   transform: translateX(-50%);
   width: 101px;
 
@@ -362,7 +362,7 @@ body {
   position: absolute;
   top: calc(70px + 153px + 35px); 
   /* 70px = Map top位置 / 153px = Map height / +35px 下に配置 */
-  left: 0.5%;
+  left: 1.5%;
   width: 390px;
   text-align: center;
 }
@@ -1156,5 +1156,6 @@ html, body {
   box-sizing: border-box;
   max-width: 100%;
 }
+
 
 
