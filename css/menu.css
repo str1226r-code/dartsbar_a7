@@ -1,0 +1,328 @@
+body {
+  font-family: 'Noto Sans JP', 'Poppins', sans-serif;
+}
+
+/* ===== Base ===== */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #FDFDFD;
+  width: 100%;
+  height: 100%;
+}
+
+/* ===== 全体中央固定ラッパ ===== */
+.menu-page {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.menu-wrapper {
+  width: 390px;
+  max-width: 390px;
+  min-height: 1750px;
+  margin: 0 auto;
+  background: #FDFDFD;
+  position: relative;
+}
+
+/* ===== 390px未満 → 完全等比縮小 ===== */
+@media (max-width: 389px) {
+  .menu-wrapper {
+    transform: scale(calc(100vw / 390));
+    transform-origin: top center;
+  }
+  body {
+    overflow-x: hidden;
+  }
+}
+
+/* ===== Header / Logo / Text ===== */
+.hero-logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 114px;
+  height: auto;
+  z-index: 10;
+}
+
+.menu-title-text,
+.menu-sub-1,
+.menu-sub-2 {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.menu-title-text {
+  top: 110px;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+}
+
+.menu-sub-1 {
+  top: 155px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  white-space: nowrap; 
+}
+
+.menu-sub-2 {
+  top: 174px;
+  font-family: 'Noto Sans JP', sans-serif;
+  display: flex;
+  gap: 4px;
+  font-weight: 700;
+}
+
+/* ===== Description ===== */
+.menu-desc-block {
+  position: absolute;
+  top: 201px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  text-align: center;
+}
+
+.menu-desc-1,
+.menu-desc-2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 10px;
+  color: #666;
+  margin: 3px 0 0 0;
+}
+
+.menu-desc-1 {
+  margin-top: 0;
+}
+
+/* ===== Red Line ===== */
+.menu-line {
+  width: 351px;
+  height: 1px;
+  background: #E60012;
+  margin: 165px auto 0 auto;
+}
+
+/* ===== Menu Column Layout ===== */
+.menu-position-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 390px;
+  margin: 0 auto;
+}
+
+.menu-2col {
+  display: flex;
+  justify-content: space-between;
+  width: 351px;
+  margin: 25px auto 0 auto;
+}
+
+.menu-left {
+  width: 48%;
+  padding-left: 40px;
+  white-space: nowrap; 
+}
+
+.menu-right {
+  width: 48%;
+  position: relative;
+  top: -5px;
+  left: 35px;
+}
+
+/* ===== Common Drink Title ===== */
+.menu-section-title {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: #000;
+  margin-bottom: 5px;
+}
+
+/* ===== Drink Lists ===== */
+ul {
+  list-style: none;
+  margin: 10px 0 0 0;
+  padding: 0;
+}
+li {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  color: #000;
+  margin-bottom: 5px;
+}
+
+/* 下線分類 */
+.menu-cocktail-list .menu-border {
+  border-bottom: 1px solid #000;
+  display: inline-block;
+  margin-top: 6px;
+  padding-bottom: 2px;
+}
+
+/* ===== Softdrink Block ===== */
+.menu-softdrink-block {
+  width: 351px;
+  margin: 10px auto 0 auto;
+  text-align: center;
+}
+
+.menu-softdrink-lists {
+  display: flex;
+  justify-content: space-between;
+  width: 351px;
+  margin: 20px auto 0 auto;
+  position: relative;
+  left: 25px;
+}
+
+.softdrink-left,
+.softdrink-right {
+  width: 48%;
+}
+
+.softdrink-title {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  display: inline-block;
+  width: fit-content;           /* ← 🔥これを追加 */
+  border-bottom: 1px solid #000;
+  margin-bottom: 6px;
+}
+
+
+/* ===== Footer ===== */
+.footer-bottom {
+  width: 390px;
+  height: 600px;
+  background: #111;
+  margin: 30px auto 0 auto;
+  position: relative;
+}
+
+.footer-logo2 {
+  position: absolute;
+  width: 300px;
+  top: 30px;
+  left: 45px;
+}
+
+.footer-red-line {
+  width: 350px;
+  height: 1px;
+  background: #E60012;
+  position: absolute;
+  top: 210px;
+  left: 20px;
+}
+
+.footer-address-title,
+.footer-contact-title {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #FAFAFA;
+  position: absolute;
+  left: 165px;
+}
+
+.footer-address-title {
+  top: 235px;
+}
+
+.footer-address-text {
+  top: 295px;
+  left: 95px;
+  width: 200px;
+  text-align: center;
+  font-size: 10px;
+  position: absolute;
+  color: #FAFAFA;
+}
+
+.footer-contact-title {
+  top: 395px;
+}
+
+.footer-contact-row {
+  position: absolute;
+  left: 150px;
+  display: flex;
+  gap: 10px;
+}
+
+.footer-row-instagram {
+  top: 450px;
+}
+.footer-row-email {
+  top: 480px;
+}
+.footer-row-tel {
+  top: 510px;
+}
+
+.footer-contact-label {
+  font-size: 13px;
+  color: #FAFAFA;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* 矢印 */
+.footer-contact-arrow {
+  width: 8.5px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* 矢印位置補正 */
+.arrow-instagram,
+.arrow-email,
+.arrow-tel {
+  transform: translateY(1px);
+}
+
+.footer-copyright {
+  position: absolute;
+  top: 555px;
+  left: 55px;
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  color: #fff;
+}
+
+/* ===== PC表示時：左右背景を黒 (#111) にする ===== */
+@media (min-width: 768px) {
+  html, body {
+    background: #111 !important; /* 両端を黒に */
+  }
+
+  .menu-page {
+    background: #111; /* 念のため */
+  }
+
+  .menu-wrapper {
+    background: #ffffff; /* メニュー本体は白維持 */
+    margin: 0 auto;
+  }
+}
+.menu-logo {
+  display: block;
+  cursor: pointer;
+}
+.menu-position-wrapper a {
+  display: inline-block;
+}

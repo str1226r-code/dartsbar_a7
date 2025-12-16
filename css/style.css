@@ -1,0 +1,1158 @@
+body {
+  font-family: 'Poppins', 'Noto Sans JP', sans-serif;
+}
+
+/* 英語タイトル系 */
+.hero-title,
+.menu-title-main,
+.hours-title,
+.access-title,
+.welcome-title {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+}
+
+/* 小見出し・サブテキスト */
+.hero-sub,
+.menu-title,
+.menu-desc,
+.address-title,
+.hours-open-title,
+.hours-holiday-title,
+.hours-contact-title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+/* 数字・料金・英語補助 */
+.yen,
+.tax,
+.big-time,
+.small-time,
+.footer-address-title,
+.footer-contact-title {
+  font-family: 'Inter', sans-serif;
+}
+
+
+/* ===== Responsive Base Fix ===== */
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: #000;
+}
+
+.page {
+  width: 100%;
+  max-width: 390px;
+  margin: 0 auto;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (min-width: 768px) {
+  body { background: #000; }
+  .page { max-width: 390px; }
+}
+
+/* =========================================
+   基本設定
+========================================= */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #fff;
+}
+
+.page {
+  width: 390px;         /* スマホ画面と同じ幅 */
+  margin: 0 auto;
+  background: #fff;
+  position: relative;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+.hero {
+  position: relative;
+  width: 390px;
+  height: 384px;
+  overflow: hidden;
+}
+
+/* 背景画像 */
+.hero-img {
+  position: absolute;
+  width: 100%;       /* 390px固定 → 100%に変更 */
+  height: 294px;
+  object-fit: cover;
+  left: 0;           /* 位置補正 */
+  top: 0;
+  z-index: 1;
+  transform: none;  /* translate削除 */
+}
+
+
+/* テキストまとめ */
+.hero-text {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+}
+
+/* --- DARTS & BAR --- */
+.hero-sub {
+  position: absolute;
+  left: 150px;
+  top: 65px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 0px 4px 4px #000;
+}
+
+/* --- A7 --- */
+.hero-title {
+  position: absolute;
+  left: 160px;
+  top: 50px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 64px;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 0px 7px 4px #000;
+}
+
+/* --- since --- */
+.hero-date {
+  position: absolute;
+  left: 160px;
+  top: 255px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #ccc;
+}
+
+/* =========================================================
+   HERO SECTION ICONS / LOGO（完全分離済み）
+========================================================= */
+
+/* --- HERO Logo --- */
+.hero-logo {
+  position: absolute;
+  width: 114px;
+  height: 79px;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+
+/* ===== MENU 見出し ===== */
+.menu-title-main {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  letter-spacing: 0.5px;
+  color: #1A1A1A;
+  text-align: center;
+  margin: 40px 0 20px 0;
+}
+
+/* ===== MENU カード枠 ===== */
+.menu-card {
+  width: 390px;
+  margin: 0 auto;
+  position: relative; /* ← 説明文の絶対配置用 */
+}
+
+/* ===== 白ボックス ===== */
+.menu-box-item {
+  position: relative;
+  width: 374px;
+  height: 38px;
+  margin: 20px auto 0 auto;
+  background: #FAFAFA;
+  border-radius: 4px;
+
+  padding: 0 12px;
+  box-shadow: 0px 4px 2px rgba(134,130,130,0.20);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+/* 左のタイトル */
+.menu-title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: #1A1A1A;
+  line-height: 1;
+}
+
+/* 右の価格 */
+.menu-right {
+  text-align: right;
+  line-height: 1.1;
+}
+
+.menu-right .yen {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: #D93030;
+}
+
+.menu-right .tax {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 9px;
+  color: #D93030;
+  margin-top: 0px;
+  display: block;
+}
+
+/* ===== 説明文（絶対配置に修正） ===== */
+.menu-desc {
+  position: absolute;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 10px;
+  color: #666666;
+  white-space: nowrap;
+}
+
+/* 1段目（WE OFFER〜） */
+.menu-desc-1 {
+  top: 30px;      /* ← ボックス直下に配置 */
+  left: 140px;
+}
+
+/* 2段目（AGES〜） */
+.menu-desc-2 {
+  top: 90px;     /* ← 2段目ボックスの下 */
+  left: 105px;
+}
+/* MENUセクションだけ余白ゼロにする */
+.menu-section {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
+
+/* MENUタイトルの余白を調整（40px → 10px） */
+.menu-title-main {
+  margin: -70px 0 20px 0;
+}
+
+/* ===== MENU ボタン（Figma完全再現） ===== */
+.menu-btn {
+  display: block;
+  width: 122px;      /* Figma 幅 */
+  height: 22px;      /* Figma 高さ */
+  line-height: 22px; /* テキスト縦中央 */
+  
+  background-color: #D93030; /* 赤 */
+  color: #FFFFFF;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;   /* Bold */
+  font-size: 10px;
+
+  text-align: center;
+  text-decoration: none;
+  border-radius: 4px;
+
+  margin: 30px auto 0 9px;  /* ← 左配置（x=9）＋上に余白 */
+}
+
+/* --- Welcome to A7. 完全中央配置（スマホ・PC対応） --- */
+.welcome-parallax {
+  position: relative;
+  display: flex;
+  align-items: center; /* ← 縦中央 */
+  justify-content: center; /* ← 横中央 */
+  text-align: center;
+}
+
+/* Welcome to A7 テキスト */
+.welcome-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  letter-spacing: 0.05em;
+  color: #FAFAFA;
+  text-shadow: 0px 4px 4px rgba(0,0,0,0.6);
+
+  position: relative; /* ← absolute は不要 */
+  z-index: 2;
+}
+
+/* スマホ最適化 */
+@media (max-width: 767px) {
+  .welcome-title {
+    font-size: 24px;
+  }
+}
+
+/* =========================================================
+   ACCESS SECTION（背景だけを下へ伸ばす）
+========================================================= */
+
+.access-section { 
+  width: 390px;
+
+  /* ★ ここを増やすだけで余白が黒で埋まる ★ */
+  min-height: 450px;   /* ← 430 → 500 に変更（調整OK） */
+
+  background: #000000;
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+}
+
+
+/* ACCESSセクション内部の余白を消す（ただしタイトルは除外） */
+.access-section *:not(.access-title) {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* --- ACCESS タイトル --- */
+.access-title {
+  position: absolute;
+  top: -10px;               /* ここがようやく効く！ */
+  left: 48%;
+  transform: translateX(-50%);
+  width: 101px;
+
+  font-family: 'Oswald', sans-serif;
+  font-weight: 500;
+  font-size: 32px;
+  color: #FAFAFA;
+  letter-spacing: 0.02em;
+}
+
+/* --- Google Map 画像 --- */
+.access-map {
+  position: absolute;
+  top: 80px;    /* タイトルの 20px + 30px */
+  left: 0;
+  width: 390px;
+  height: 153px;
+
+  object-fit: cover;
+  border-radius: 0px;
+}
+/* =========================================================
+   ADDRESS block (under GoogleMap)
+========================================================= */
+
+.access-address {
+  position: absolute;
+  top: calc(70px + 153px + 35px); 
+  /* 70px = Map top位置 / 153px = Map height / +35px 下に配置 */
+  left: -1.5%;
+  width: 390px;
+  text-align: center;
+}
+
+/* ADDRESS 見出し */
+.address-title {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 500;          /* Medium */
+  font-size: 32px;
+  color: #FAFAFA;
+  width: 121px;
+  height: 41px;
+  margin: 0 auto 10px auto;  /* 中央配置 */
+}
+
+
+/* 郵便マーク（赤） */
+.post-mark {
+  color: #FF0000;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+/* 郵便番号（白） */
+.post-number {
+  color: #FAFAFA;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  margin-left: 2px;
+}
+
+/* 住所行（白） */
+.address-line {
+  color: #FAFAFA;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+}
+/* ADDRESS タイトル 下の余白を調整 */
+.address-title {
+  margin: 0 auto 30px auto; /* 15px→18pxなどに変更可 */
+}
+/* ===================================
+   ACCESS デザイン微調整
+=================================== */
+.address-title {
+  margin-top: 25px; /* ACCESSの黒背景内の呼吸を少し増やす */
+}
+
+
+/* =========================================================
+   HOURS SECTION
+========================================================= */
+.hours-section {
+  width: 390px;
+  height: 511px;
+  background: #000;
+  position: relative;
+
+  margin: -25px auto 0 auto;  /* ← ★ ここをマイナスにする！ */
+}
+
+/* タイトル */
+.hours-title {
+  color: #FAFAFA;
+  font-family: 'Oswald', sans-serif;
+  font-size: 32px;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* ==== 横線（共通） ==== */
+.line-horizontal {
+  position: absolute;
+  width: 268px;       /* ← ★ 横線の幅（変更OK） */
+  height: 1px;
+  background: #FAFAFA;
+  left: 62px;         /* ← ★ x位置（変更OK） */
+}
+
+/* 横線1 */
+.line-h1 {
+  top: 62px;
+}
+
+/* 横線2（横線1から130px下） */
+.line-h2 {
+  top: calc(62px + 130px);
+}
+
+/* 横線3（横線2から130px下） */
+.line-h3 {
+  top: calc(62px + 260px);
+}
+
+/* 横線4（横線3から130px下・下閉じ線） */
+.line-h4 {
+  top: calc(62px + 385px);
+}
+
+/* ==== 縦線（共通） ==== */
+.line-vertical {
+  position: absolute;
+  width: 1px;
+  height: 386px;       /* ← ★ 縦線の高さ（変更OK） */
+  background: #FAFAFA;
+  top: 62px;           /* ← 横線1の高さと合わせる */
+}
+
+/* 縦線1（左） */
+.line-v1 {
+  left: 61px;          /* ← ★ x位置（変更OK） */
+}
+
+/* 縦線2（右） */
+.line-v2 {
+  left: 329px;         /* ← ★ x位置（変更OK） */
+}
+
+/* ==== ▼三角マーク（横線中央に配置・内側に入れる） ==== */
+.triangle {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 8px solid #FAFAFA;
+
+  /* 横線中央 */
+  left: calc(62px + (268px / 2) - 6px);
+}
+
+/* 三角1（横線1内側） */
+.triangle-1 {
+  top: calc(62px + 0px);   /* ★ 横線より3px下＝内側 */
+}
+
+/* 三角2（横線2内側） */
+.triangle-2 {
+  top: calc(62px + 130px + 0px);
+}
+
+/* 三角3（横線3内側） */
+.triangle-3 {
+  top: calc(62px + 260px + 0px);
+}
+/* ===== 共通：ブロック（線の内側にピッタリ配置） ===== */
+.hours-block {
+  position: absolute;
+  width: 268px;
+  left: 62px;        /* ← 枠線の左端に合わせる（変更不可） */
+  text-align: center;
+  color: #FAFAFA;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ----- 各ブロックの位置（あなたの枠線に完全対応） ----- */
+.block-1 { top: 70px; }
+.block-2 { top: 200px; }
+.block-3 { top: 330px; }
+
+
+/* ===== OPEN（上位置調整しやすい） ===== */
+.hours-open-title {
+  margin: 0;
+  margin-top: -5px;               /* ← ★ OPEN の上位置：ここだけ変えればOK */
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #FAFAFA;
+}
+
+/* ===== 8:00 PM – Last Call / Close（上下位置調整付き） ===== */
+.hours-open-time {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: -15px;               /* ← ★ OPEN と 8:00 の隙間を調整 */
+  position: relative;
+
+  left: 0;                         /* ← 横位置微調整したい時だけ触る */
+}
+
+/* 8:00（太字・軽く詰め） */
+.big-time {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  letter-spacing: -1px;
+  color: #FAFAFA;
+  margin-right: 6px;
+}
+
+/* PM – Last Call / Close（細字・自然な詰め・上下位置調整可能） */
+.small-time {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  letter-spacing: -1.5px;     /* ここは調整自由 */
+
+  color: #FAFAFA;
+
+  /* ★ ここを変えるだけで上下に動く（+で下 / -で上） */
+  transform: translateY(5px);
+}
+
+
+/* ===== Hours May Vary（色E6E6E6・位置調整可） ===== */
+.hours-note {
+  margin-top: -2px;               /* ← ★ 8:00〜との間隔を調整する場所 */
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #E6E6E6;                 /* ← 指定色 */
+}
+
+/* ===== Holidays タイトル ===== */
+.hours-holiday-title {
+  margin: 0;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.3;
+  text-align: center;
+}
+
+/* ===== Holiday 説明 ===== */
+.hours-holiday-note {
+  margin-top: 7px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #E6E6E6;
+  line-height: 1.4;
+  text-align: center;
+}
+
+/* ===== CONTACT タイトル ===== */
+.hours-contact-title {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  color: #FAFAFA;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* ===============================
+   CONTACT テキスト版（完成形）
+================================ */
+.hours-contact-icons {
+  margin-top: 20px; /* ← ここを少し上へ */
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.hours-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* 文字と矢印の距離 */
+}
+
+.hours-contact-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #FAFAFA;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.hours-arrow {
+  width: 18px;
+  height: auto;
+  transform: translateY(1px);
+}
+
+/* 画面小さめ対応 */
+@media (max-width: 374px) {
+  .hours-contact-text {
+    font-size: 16px;
+  }
+  .hours-arrow {
+    width: 16px;
+  }
+}
+
+/* PC 対応 */
+@media (min-width: 768px) {
+  .hours-contact-text {
+    font-size: 20px;
+  }
+  .hours-arrow {
+    width: 20px;
+  }
+}
+
+/* ===================================
+   ACCESS / ADDRESS レスポンシブ修正
+=================================== */
+
+/* ACCESS内の全体中央寄せ */
+.access-address {
+  width: 100%;
+  text-align: center;
+}
+
+/* 中央に完全フィット */
+.address-text {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
+
+  top: 0; /* 既存位置維持 */
+  text-align: center;
+  line-height: 1.4;
+  margin: 20px auto 0 auto;
+}
+
+/* 小型スマホでもズレない安心感 */
+@media (max-width: 389px) {
+  .address-text {
+    width: 100%;
+    left: 0;
+    transform: none;
+  }
+}
+
+
+/* =========================================================
+   SECTION DIVIDER（汎用 赤ライン）
+========================================================= */
+
+.section-divider {
+  width: 390px;               /* ← 横幅 ／ 調整OK */
+  height: 1px;                /* ← 太さ1px */
+  background-color: #E60012;  /* ← 色指定（真っ赤） */
+
+  margin: 0px auto 0 auto;   /* ← 上下の余白：ここで調整 */
+  
+  /* 左右位置調整（必要なら使う）*/
+  transform: translateX(0px); /* 左右に動かしたい場合だけ変更 */
+}
+/* ===== Footer 全体 ===== */
+.footer {
+  position: relative;   /* ★ 追加 */
+  z-index: 1000;        /* ★ 追加：黒背景より前に出す */
+}
+
+/* ===== 画像＋矢印のラッパ ===== */
+.footer-img-wrapper {
+  position: relative;
+  width: 390px;
+  height: auto;
+}
+
+/* ===== Footer画像 ===== */
+.footer-img {
+  width: 390px;
+  height: auto;
+  display: block;
+}
+
+/* ===== スライド三角（左右） ===== */
+.footer-arrow {
+  position: absolute;
+  width: 35px;
+  height: 33px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.footer-arrow-left {
+  left: 5px;
+  transform: translateY(-50%) scaleX(-1);
+}
+
+.footer-arrow-right {
+  right: 5px;
+  transform: translateY(-50%) scaleX(-1);
+}
+
+
+
+/* ===== Footer Text（画像の下に表示）===== */
+.footer-text {
+  margin-top: 20px;        /* ← ★ 画像下との距離を変える */
+  padding: 0 7px;          /* ← 左右余白（調整OK） */
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.6;        /* ← 行間160% */
+  color: #666666;
+  text-align: left;
+}
+
+/* ===== Contact & Address block ===== */
+.footer-info {
+  width: 390px;
+  margin: 20px auto 0 auto;  /* ← 上の文章との距離調整 */
+  padding-left: 7px;
+  color: #1A1A1A;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* COPYRIGHT */
+.copyright {
+  text-align: center;
+  font-size: 10px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  color: #666;
+}
+/* ===== 黒背景下部エリア ===== */
+.footer-bottom {
+  width: 390px;
+  height: 600px;
+  background: #111111;
+  position: relative;
+  margin: 0 auto;
+  z-index: 50;              /* ← ★ これで画像より上になる */
+}
+
+/* ===== ロゴ ===== */
+.footer-logo2 {
+  position: absolute;
+  width: 300px;
+  height: 207px;
+  top: 30px;
+  left: 45px;
+}
+
+/* ===== 赤い線 ===== */
+.footer-red-line {
+  position: absolute;
+  width: 350px;
+  height: 1px;
+  top: 210px;
+  left: 25px;
+  background-color: #E60012;
+}
+
+/* ===== ADDRESS ===== */
+.footer-address-title {
+  position: absolute;
+  top: 235px;
+  left: 170px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #FAFAFA;
+  z-index: 100;            /* ← ★ */
+}
+
+/* ===== Address テキスト ===== */
+.footer-address-text {
+  position: absolute;
+  top: 285px;      /* ← 位置調整ここでOK */
+  left: 99px;     /* ← 横位置調整OK */
+  width: 200px;
+  text-align: center;
+
+  font-family: 'Poppins', sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 1.45;
+  color: #FAFAFA;
+}
+
+/* 郵便マーク（赤） */
+.post-mark {
+  color: #D92332;
+  font-weight: 600;
+}
+
+/* 郵便番号色 */
+.post-number {
+  color: #FAFAFA;
+  font-weight: 600;
+}
+/* ===== CONTACT タイトル ===== */
+.footer-contact-title {
+  position: absolute;
+  top: 395px;            /* ★ ADDRESS から 30 下 → 調整可 */
+  left: 169px;           /* ★ 横位置調整 */
+  font-family: 'Oswald', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #FAFAFA;
+  text-align: center;
+}
+
+/* ===== CONTACT (Footer) ===== */
+
+/* 行共通 */
+.footer-contact-row {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  left: 150px;  /* 中央寄せ基準位置 */
+}
+
+/* Instagram 行 */
+.footer-row-instagram {
+  top: 450px;
+}
+
+/* E-Mail 行 */
+.footer-row-email {
+  top: 480px;
+}
+
+/* TEL 行 */
+.footer-row-tel {
+  top: 510px; /* E-Mail +30px */
+}
+
+
+/* テキスト */
+.footer-contact-label {
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: #FAFAFA;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+/* 矢印 */
+.footer-contact-arrow {
+  width: 8.5px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* 矢印位置補正 */
+.arrow-instagram,
+.arrow-email,
+.arrow-tel {
+  transform: translateY(1px);
+}
+
+/* 📱 小型端末対応 */
+@media (max-width: 374px) {
+  .footer-contact-row {
+    left: 140px; /* 少し中央寄り */
+    gap: 8px;
+  }
+}
+
+/* 💻 PCレスポンシブ */
+@media (min-width: 768px) {
+  .footer-contact-label {
+    font-size: 15px;
+  }
+  .footer-contact-arrow {
+    width: 11px;
+  }
+}
+
+/* ===== 黒背景下部エリア ===== */
+.footer-bottom {
+  width: 390px;
+  height: 600px;
+  background: #111111;
+  position: relative;
+  margin: 0 auto;
+  top: 0;                         /* ← 余白削除 */
+}
+footer {
+  margin: 0;
+  padding: 0;
+}
+
+.footer-img {
+  width: 390px;
+  height: auto;
+  display: block;
+  margin: 0;
+  padding: 0;
+  line-height: 0;
+}
+
+.footer-bottom {
+  width: 390px;
+  height: 600px;
+  background: #111111;
+  position: relative;
+  margin: 0 auto;
+  padding: 0;
+  top: 0;
+}
+/* ===== COPYRIGHT ===== */
+.footer-copyright {
+  position: absolute;
+  top: 555px;       /* E-Mail(約480px)+45 の指定 / 必要ならここで調整 */
+  left: 55px;       /* x=44px 指定 */
+  
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;      /* Regular */
+  font-size: 10px;
+  color: #FFFFFF;
+  
+  letter-spacing: 0.02em;
+  text-align: left;
+
+  /* 他セクションに影響しないように絶対配置 */
+  z-index: 200;
+}
+
+/* ==== ベース ==== */
+body {
+  margin: 0;
+  background: #000;
+}
+
+/* 全体ラッパ */
+.responsive-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  overflow-x: hidden;
+}
+
+/* 固定デザイン範囲（元の390px全体を包む） */
+.page {
+  width: 390px;
+  transform-origin: top center;
+}
+
+/* ==== PC時にスケール ==== */
+@media (min-width: 768px) {
+  .responsive-wrapper {
+    transform: scale(calc(100vw / 390));
+    transform-origin: top center;
+  }
+
+  .page {
+    transform: none !important;
+  }
+}
+
+@media (min-width: 1280px) {
+  .page {
+    transform: scale( calc(1280 / 390) );
+  }
+}
+/* ===== 画像共通レスポンシブ ===== */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* PC時の拡大対応（中央幅600） */
+@media (min-width: 768px) {
+  .menu-image-wrapper img {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+/* =======================================
+    📌 過剰スケールや横ズレ防止
+======================================= */
+
+/* 全体ラッパ */
+.page {
+  width: 100%;
+  max-width: 390px; /* 390px以上広がらせない */
+  margin: 0 auto;
+  position: relative;
+}
+
+/* 小さいスマホ（iPhone SEなど）対策 */
+@media (max-width: 389px) {
+  .page {
+    transform: scale(calc(100vw / 390));
+    transform-origin: top center;
+  }
+}
+
+/* 中型端末 → 拡大しない(デザイン固定) */
+@media (min-width: 390px) and (max-width: 767px) {
+  .page {
+    transform: scale(1);
+  }
+}
+
+/* PC・タブレット → 中央固定・黒背景 */
+@media (min-width: 768px) {
+  body {
+    background: #111111;
+  }
+  .responsive-wrapper {
+    justify-content: center;
+  }
+  .page {
+    transform: scale(1); /* ←拡大しない */
+    background: #ffffff;
+  }
+}
+
+/* 横スクロールが出ないよう統制 */
+body, html {
+  overflow-x: hidden;
+}
+
+/* 画像は常に比率維持 */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ====== Footer Slider ====== */
+
+/* スライダー全体の枠（390px内で横スライド・はみ出し隠す） */
+.footer-slider {
+  position: relative;
+  width: 390px;
+  max-width: 100%;
+  margin: 0 auto;
+  overflow: hidden;          /* ← これが大事！はみ出した横の画像を隠す */
+}
+
+/* 横に並べるコンテナ */
+.footer-slides {
+  display: flex;             /* ← 子要素を横並びにする */
+  width: 100%;
+  transition: transform 0.6s ease; /* スライドのアニメーション */
+}
+
+/* 1枚1枚の画像 */
+.footer-slide {
+  flex: 0 0 100%;            /* 1枚につき「画面幅100%」ぶん取る */
+  max-width: 100%;
+}
+
+
+/* ==== WELCOME PARALLAX（A7用・壊れない完全版） ==== */
+
+.welcome-parallax {
+  position: relative;
+  width: 100%;
+  height: 360px;
+  background-image: url('../img/welcome.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin: 20px auto 0 auto;
+}
+
+.welcome-title {
+  color: #fff;
+  font-size: 32px;
+  font-weight: 700;
+  text-shadow: 0 4px 10px rgba(0,0,0,0.6);
+  z-index: 2;
+}
+
+@media (min-width:768px){
+  .welcome-parallax{
+    height:520px;
+  }
+  .welcome-title{
+    font-size:40px;
+  }
+}
+/* 画面幅より大きい要素を強制的に禁止 */
+html, body {
+  overflow-x: hidden;
+}
+
+/* すべての要素のはみ出しを防ぐ */
+* {
+  box-sizing: border-box;
+  max-width: 100%;
+}
