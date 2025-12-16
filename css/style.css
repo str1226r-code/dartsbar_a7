@@ -332,7 +332,7 @@ body {
 .access-title {
   position: absolute;
   top: -10px;               /* ここがようやく効く！ */
-  left: 55%;
+  left: 53%;
   transform: translateX(-50%);
   width: 101px;
 
@@ -362,7 +362,7 @@ body {
   position: absolute;
   top: calc(70px + 153px + 35px); 
   /* 70px = Map top位置 / 153px = Map height / +35px 下に配置 */
-  left: 5%;
+  left: 1.5%;
   width: 390px;
   text-align: center;
 }
@@ -578,7 +578,7 @@ body {
 
 /* ===== Hours May Vary（色E6E6E6・位置調整可） ===== */
 .hours-note {
-  margin-top: -2px;               /* ← ★ 8:00〜との間隔を調整する場所 */
+  margin-top: -4px;               /* ← ★ 8:00〜との間隔を調整する場所 */
   text-align: center;
   font-family: 'Poppins', sans-serif;
   font-size: 16px;
@@ -1156,6 +1156,7 @@ html, body {
   box-sizing: border-box;
   max-width: 100%;
 }
+
 
 
 
