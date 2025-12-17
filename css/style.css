@@ -332,7 +332,7 @@ body {
 .access-title {
   position: absolute;
   top: -10px;               /* ここがようやく効く！ */
-  left: 49%;
+  left: 50%;
   transform: translateX(-50%);
   width: 101px;
 
@@ -362,7 +362,7 @@ body {
   position: absolute;
   top: calc(70px + 153px + 35px); 
   /* 70px = Map top位置 / 153px = Map height / +35px 下に配置 */
-  left: 1%;
+  left: 1.5%;
   width: 390px;
   text-align: center;
 }
@@ -881,14 +881,9 @@ body {
   top: 450px;
 }
 
-/* E-Mail 行 */
-.footer-row-email {
-  top: 480px;
-}
-
 /* TEL 行 */
 .footer-row-tel {
-  top: 510px; /* E-Mail +30px */
+  top: 480px; /* E-Mail +30px */
 }
 
 
@@ -1156,15 +1151,3 @@ html, body {
   box-sizing: border-box;
   max-width: 100%;
 }
-
-
-
-
-
-
-
-
-
-
-
-
